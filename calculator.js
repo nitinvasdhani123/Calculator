@@ -14,7 +14,9 @@ Array.from(buttons).forEach((btn) => {
         }
         else if(e.target.innerHTML == 'C')
         {
-            string = string.slice(0,-1);
+            let str = document.getElementById('input');
+            string = string.slice(0,str.value.length-1);
+            // string = str.value.substring(0,str.value.length-1)
             document.querySelector('input').value = string;
         }
         else
